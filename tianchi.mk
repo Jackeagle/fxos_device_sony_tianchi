@@ -62,40 +62,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/recovery/bootrec-device:recovery/bootrec-device
 
-# Recovery
-PRODUCT_PACKAGES += \
-    extract_elf_ramdisk
-
 # Sbin
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/charger:root/charger \
     $(COMMON_PATH)/rootdir/sbin/wait4tad_static:root/sbin/wait4tad_static \
     $(COMMON_PATH)/rootdir/sbin/tad_static:root/sbin/tad_static
 
-# Audio
-PRODUCT_PACKAGES += \
-    audiod \
-    audio.a2dp.default \
-    audio.primary.msm8226 \
-    audio.r_submix.default \
-    audio.usb.default \
-    audio_policy.msm8226
-
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/audio_effects.conf:system/etc/audio_effects.conf \
     $(COMMON_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(COMMON_PATH)/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
-
-# Display
-PRODUCT_PACKAGES += \
-    hwcomposer.msm8226 \
-    gralloc.msm8226 \
-    copybit.msm8226 \
-    memtrack.msm8226
-
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    e2fsck
 
 # FM Radio
 PRODUCT_COPY_FILES += \
@@ -154,15 +130,6 @@ PRODUCT_COPY_FILES += \
 # System Monitor (Thermal Control)
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/sysmon.cfg:system/etc/sysmon.cfg
-
-# USB
-PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
-
-# WiFi
-PRODUCT_PACKAGES += \
-    mac-update \
-    wcnss_service
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
